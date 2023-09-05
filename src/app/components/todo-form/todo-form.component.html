@@ -1,0 +1,24 @@
+<head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+</head>
+<div class="card shadow text-center mb-5">
+    <div class="card-header bg-primary text-light">
+        <h4>ADD TODO</h4>
+    </div>
+
+    <div class="card-body">
+        <form #addTodo="ngForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" name="todo" class="form-control" placeholder="Add Todo . . ." [(ngModel)]="todo" required>
+            </div>
+            <button class="btn btn-primary" [disabled]="addTodo.invalid"> ADD </button>
+        </form>
+        <!-- {{todo}} -->
+    </div>
+</div>
